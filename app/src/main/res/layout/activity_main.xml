@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonEntrar"
         android:backgroundTint="@color/azulbotao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,6 +47,18 @@
         app:layout_constraintTop_toBottomOf="@+id/senha"
         />
 
+    <TextView
+        android:id="@+id/textCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Sem conta ainda? Crie aqui!"
+        android:textColor="@color/white"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

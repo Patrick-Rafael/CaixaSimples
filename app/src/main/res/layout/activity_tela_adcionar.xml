@@ -8,15 +8,13 @@
     tools:context=".ui.tela_adcionar">
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/valorAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="188dp"
         android:hint="Digite o valor a adcionar"
-        android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,9 +27,9 @@
         android:backgroundTint="@color/azulbotao"
         android:src="@drawable/ic_save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="@+id/valorAdd"
+        app:layout_constraintStart_toStartOf="@+id/valorAdd"
+        app:layout_constraintTop_toBottomOf="@+id/valorAdd"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

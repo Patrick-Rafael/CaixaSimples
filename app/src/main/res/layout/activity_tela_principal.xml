@@ -43,13 +43,14 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonAdicionar"
         app:layout_constraintStart_toEndOf="@+id/buttonRemover" />
 
-    <Button
-        android:id="@+id/buttonCaixa"
+    <EditText
+        android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:backgroundTint="@color/azulbotao"
-        android:text="Iniciar caixa"
+        android:layout_marginTop="200dp"
+        android:hint="Infome o valor inicial:"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

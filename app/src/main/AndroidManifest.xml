@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cs">
-        <activity android:name=".ui.tela_remover"></activity>
+        <activity android:name=".ui.tela_cadastro"></activity>
+        <activity android:name=".ui.CadastroActivity" />
+        <activity android:name=".ui.tela_remover" />
         <activity android:name=".ui.tela_adcionar" />
         <activity android:name=".ui.tela_principal" />
         <activity android:name=".ui.MainActivity">
