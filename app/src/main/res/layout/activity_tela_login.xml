@@ -28,24 +28,24 @@
 
     <EditText
         android:id="@+id/senha"
-        android:password="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="Senha "
+        android:password="true"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <Button
         android:id="@+id/buttonEntrar"
-        android:backgroundTint="@color/azulbotao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:textColor="@color/white"
+        android:backgroundTint="@color/azulbotao"
         android:text="Entrar"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/senha"
-        />
+        tools:layout_editor_absoluteX="40dp" />
 
     <TextView
         android:id="@+id/textCadastro"

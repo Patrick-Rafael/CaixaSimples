@@ -4,52 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.tela_cadastro"
     android:background="@color/azultela"
-    >
-
-    <EditText
-        android:id="@+id/nomeCadastro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:gravity="bottom"
-        android:hint="Nome"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/imageLogo"
-
-        />
-    <EditText
-
-        android:id="@+id/senhaCadastro"
-        android:layout_width="match_parent"
-        android:password="true"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:gravity="bottom"
-        android:hint="Senha "
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/nomeCadastro"
-
-        />
+    tools:context=".ui.tela_cadastro">
 
     <EditText
         android:id="@+id/emailCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:gravity="bottom"
         android:hint="Email"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/senhaCadastro"
 
+
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <EditText
+
+        android:id="@+id/senhaCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha "
+        android:password="true"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/emailCadastro"
+        android:layout_margin="40dp"
         />
 
     <ImageView
         android:id="@+id/imageLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="104dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -59,14 +46,12 @@
         android:id="@+id/buttonCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="120dp"
         android:backgroundTint="@color/azulbotao"
         android:hint="Cadastrar"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailCadastro" />
+        app:layout_constraintEnd_toEndOf="@+id/senhaCadastro"
+        app:layout_constraintStart_toStartOf="@+id/senhaCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/senhaCadastro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

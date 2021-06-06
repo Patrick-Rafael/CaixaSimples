@@ -4,32 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azultela"
-    tools:context=".ui.tela_adcionar">
+    tools:context=".ui.activity_tela_de_inicio"
+    android:background="@color/azultela">
+
 
     <EditText
-        android:id="@+id/valorAdd"
+        android:id="@+id/caixaInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:hint="Digite o valor a adicionar"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="Valor do Caixa:"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:text="Salvar"
-        android:id="@+id/buttonSalvarAdd"
+        android:id="@+id/buttonAdicionarCaixa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_add"
+
+        app:backgroundTint="@color/azulbotao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSinout"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
         android:backgroundTint="@color/azulbotao"
-        android:src="@drawable/ic_save"
+        android:text="Sair"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/valorAdd"
-        app:layout_constraintStart_toStartOf="@+id/valorAdd"
-        app:layout_constraintTop_toBottomOf="@+id/valorAdd"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
