@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         botaoCadastro.setOnClickListener {
-            intent = Intent(applicationContext, tela_cadastro::class.java)
+            intent = Intent(applicationContext, Activity_recycler_view::class.java)
             startActivity(intent)
         }
 

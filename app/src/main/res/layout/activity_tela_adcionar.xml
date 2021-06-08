@@ -9,27 +9,91 @@
 
     <EditText
         android:id="@+id/valorAdd"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:hint="Digite o valor a adicionar"
+        android:hint="Digite o valor unitario"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/produto"
+        app:layout_constraintStart_toStartOf="@+id/produto"
+        app:layout_constraintTop_toBottomOf="@+id/produto" />
 
-    <ImageButton
-        android:text="Salvar"
+    <EditText
+        android:id="@+id/quantidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Quantidade"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/valorAdd"
+       />
+
+    <Button
         android:id="@+id/buttonSalvarAdd"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:backgroundTint="@color/azulbotao"
-        android:src="@drawable/ic_save"
+        android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/valorAdd"
-        app:layout_constraintStart_toStartOf="@+id/valorAdd"
-        app:layout_constraintTop_toBottomOf="@+id/valorAdd"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="@+id/selecao"
+        app:layout_constraintStart_toStartOf="@+id/cliente"
+        app:layout_constraintTop_toBottomOf="@+id/selecao"
+        />
+
+    <EditText
+        android:id="@+id/produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:hint="Produto"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+         />
+
+    <EditText
+        android:id="@+id/cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Cliente/Fornecedor"
+        android:inputType="textPersonName"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantidade" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/selecao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/cliente"
+        app:layout_constraintStart_toStartOf="@+id/cliente"
+        app:layout_constraintTop_toBottomOf="@id/cliente"
+        app:singleSelection="true">
+
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Receita" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Despesa" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

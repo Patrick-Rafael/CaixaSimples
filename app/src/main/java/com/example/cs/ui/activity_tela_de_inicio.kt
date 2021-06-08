@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
+import androidx.core.widget.addTextChangedListener
 import com.example.cs.R
 import com.google.firebase.auth.FirebaseAuth
 
@@ -21,14 +23,19 @@ class activity_tela_de_inicio : AppCompatActivity() {
 
         val botaoSair: Button = findViewById(R.id.buttonSinout)
         val botaoCaixaAdd: ImageButton = findViewById(R.id.buttonAdicionarCaixa)
+        val campoInicial: EditText = findViewById(R.id.caixaInicial)
 
+        var teste: TextView = findViewById(R.id.teste)
 
-        val campoCaixa = findViewById<EditText>(R.id.caixaInicial).text.toString().trim()
+        //var campoCaixa = findViewById<EditText>(R.id.caixaInicial).text.toString().trim()
 
 
 
         botaoCaixaAdd.setOnClickListener {
-            //redirecionar()
+
+            teste.text = "Numero:" + campoInicial.text.toString().toInt()
+
+            iniciarcaixaERedirecionar()
         }
 
         botaoSair.setOnClickListener{
@@ -39,7 +46,7 @@ class activity_tela_de_inicio : AppCompatActivity() {
 
 
 
-    private fun redirecionar(){
+    private fun iniciarcaixaERedirecionar(){
         intent = Intent(applicationContext, tela_principal::class.java)
         startActivity(intent)
         finish()

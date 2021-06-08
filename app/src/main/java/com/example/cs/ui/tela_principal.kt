@@ -3,14 +3,13 @@ package com.example.cs.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import com.example.cs.R
 import com.google.firebase.auth.FirebaseAuth
 
 
 
-class tela_principal : AppCompatActivity() {
+class tela_principal :AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {

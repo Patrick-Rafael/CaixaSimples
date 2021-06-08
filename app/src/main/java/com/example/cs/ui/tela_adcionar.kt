@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import com.example.cs.R
 
@@ -14,10 +15,19 @@ class tela_adcionar : AppCompatActivity() {
 
         val botaoSalvarAdd: ImageButton = findViewById(R.id.buttonSalvarAdd)
 
-       botaoSalvarAdd.setOnClickListener {intent = Intent(applicationContext, tela_principal::class.java)
-            startActivity(intent)}
 
+       botaoSalvarAdd.setOnClickListener {}
+
+        //intent = Intent(applicationContext, tela_principal::class.java)
+        //startActivity(intent)
+
+    }
+
+    private fun pegarNumero(){
+
+        val numero = findViewById<EditText>(R.id.valorAdd).text.toString().trim()
 
 
     }
+
 }
