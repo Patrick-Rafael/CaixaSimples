@@ -14,7 +14,7 @@ import org.w3c.dom.Text
 
 class ExampleAdapter(
     private val examplelist: List<ExampleItem>,
-    private val listener: onItemClickListener
+    //private val listener: onItemClickListener
 ) :
     RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder>() {
 
@@ -31,24 +31,26 @@ class ExampleAdapter(
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
         val currentItem = examplelist[position]
 
-        holder.textView1.text = currentItem.produto
-        holder.textView2.text = currentItem.valorUnitario
-
+        holder.produto.text = currentItem.produto
+        holder.preco.text = "$" + currentItem.valorUnitario
+        holder.quantidade.text =currentItem.quantidade
     }
 
     override fun getItemCount() = examplelist.size
 
-    inner class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-        View.OnClickListener {
+    inner class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+         {
 
-        val textView1: TextView = itemView.findViewById(R.id.text_view_1)
-        val textView2: TextView = itemView.findViewById(R.id.text_view_2)
+        val produto: TextView = itemView.findViewById(R.id.produto)
+        val preco: TextView = itemView.findViewById(R.id.preco)
+        val quantidade: TextView = itemView.findViewById(R.id.quantidade)
 
-        init {
+
+       /*init {
             itemView.setOnClickListener(this)
         }
 
-        override fun onClick(v: View?) {
+      override fun onClick(v: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
                 listener.onItemClick(position)
@@ -57,7 +59,7 @@ class ExampleAdapter(
     }
 
     interface onItemClickListener {
-        fun onItemClick(position: Int)
+        fun onItemClick(position: Int)*/
 
     }
 }

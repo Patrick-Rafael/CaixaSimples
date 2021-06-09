@@ -1,5 +1,22 @@
 package com.example.cs.ui
 
-data class ExampleItem (var produto : String, var valorUnitario :String, var quantidade: String, var cliente: String, var dia: String, var mes: String, var ano: String,
+import com.google.firebase.database.Exclude
 
-                        var alternativa: String)
+data class ExampleItem(
+
+    var id: String? = null,
+    var produto: String? = null,
+    var valorUnitario: Int? = null,
+    var quantidade: String? = null,
+    var cliente: String? = null,
+    var dia: String? = null,
+    var mes: String? = null,
+    var ano: String? = null,
+    var alternativa: String? = null,
+    var isDeleted: Boolean? = null
+
+
+) {}
+
+
+

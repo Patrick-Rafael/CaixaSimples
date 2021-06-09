@@ -33,7 +33,7 @@ class activity_tela_de_inicio : AppCompatActivity() {
 
         botaoCaixaAdd.setOnClickListener {
 
-            teste.text = "Numero:" + campoInicial.text.toString().toInt()
+            //teste.text = "Numero:" + campoInicial.text.toString().toInt()
 
             iniciarcaixaERedirecionar()
         }

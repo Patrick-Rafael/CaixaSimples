@@ -19,7 +19,7 @@
             android:src="@drawable/ic_teste" />
 
         <TextView
-            android:id="@+id/text_view_1"
+            android:id="@+id/produto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/image_view"
@@ -29,14 +29,24 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text_view_2"
+            android:id="@+id/preco"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_1"
+            android:layout_below="@id/produto"
             android:layout_toEndOf="@id/image_view"
             android:text="Line 2" />
 
+        <TextView
+            android:id="@+id/quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/produto"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="240dp"
+            android:text="Line 3"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>

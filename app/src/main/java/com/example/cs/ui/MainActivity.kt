@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     private fun reload() {
-        intent = Intent(applicationContext, activity_tela_de_inicio::class.java)
+        intent = Intent(applicationContext, tela_principal::class.java)
         startActivity(intent)
         finish()
     }
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
                         Toast.makeText(
-                            baseContext, "Authentication failed.",
+                            baseContext, "Algo esta incorreto",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -82,7 +82,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         botaoCadastro.setOnClickListener {
-            intent = Intent(applicationContext, Activity_recycler_view::class.java)
+
+            intent = Intent(applicationContext, tela_cadastro::class.java)
             startActivity(intent)
         }
 
